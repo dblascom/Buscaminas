@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -15,6 +16,9 @@ namespace Buscaminas
     {
         public Form1()
         {
+            Prompt pr = new Prompt();
+            bool dificultad = pr.CreateMyForm();
+
             InitializeComponent();
             Tablero tablero = new Tablero(5,5);
             Casilla casilla = new Casilla();
